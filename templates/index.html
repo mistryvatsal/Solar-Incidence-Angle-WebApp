@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>  
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <!-- Meta Tag for responsive -->
+    <meta name=”viewport” content=”width=1024, minimal-ui”>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="height=device-height, initial-scale=1.0">  
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet"> 
+
+<title>Solar Incidence Angle</title>
+	<head>
+		<title>Solar Incidence Angle</title>
+	</head>
+	
+    <body style="margin: 0px; padding: 0px;">
+		<div class = "Main">
+            <div class = "Title">
+                Solar Incidence Angle Calculator
+            </div>
+
+            <div class = "Calc_Box" class="fontclass">
+                
+                <form method="POST" action="/result">
+                  
+                    <label>Enter the date in dd/mm format : </label> <input type="text" name="date_dd" maxlength="2" style="width: 20px; margin: 5px 5px 5px 5px;"><input type="text" name="date_mm" maxlength="2" style="width: 20px; margin: 5px 5px 5px 5px;">
+
+                        <br>
+
+                    <label>Enter the time in hours and minutes format : </label> <input type="text" name="time_hours" maxlength="2" style="width: 20px; margin: 5px 5px 5px 5px;"><input type="text" name="time_minutes" maxlength="2" style="width: 20px; margin: 5px 5px 5px 5px;">
+
+                    <br>
+
+                    <label>Enter the Local Longitude in degrees and minutes format : </label> <input type="text" name="degrees_local" maxlength="2" style="width: 20px; margin: 5px 5px 5px 5px;"><input type="text" name="minutes_local" maxlength="2" style="width: 20px; margin: 5px 5px 5px 5px;">
+
+                    <br>
+
+                    <label>Enter the Standard Longitude in degrees and minutes format :</label> <input type="text" name="degrees_std" maxlength="2" style="width: 20px; margin: 5px 5px 5px 5px;"><input type="text" name="minutes_std" maxlength="2" style="width: 20px; margin: 5px 5px 5px 5px;">
+
+                    <br>
+
+                    <label>Enter the Local Latitude or the Phi angle in degrees and minutes format ( Φ ) :</label> <input type="text" name="phi_degrees" maxlength="2" style="width: 20px; margin: 5px 5px 5px 5px;"><input type="text" name="phi_minutes" maxlength="2" style="width: 20px; margin: 5px 5px 5px 5px;">
+
+                    <br>
+
+                    <label>Enter the Tilt angle or the Beta angle ( Β ) : </label> <input type="text" name="beta_angle" maxlength="2" style="width: 20px; margin: 5px 5px 5px 5px;">
+
+                    <br>
+
+                    <label>Enter the Due to South angle or the Gamma angle ( Γ ) : </label> <input type="text" name="gamma_angle" maxlength="2" style="width: 20px; margin: 5px 5px 5px 5px;">
+
+                    <br>
+
+                    <label>Select the hemisphere : </label><input type="radio" name="hemisphere" value="western_hemisphere">Western Hemisphere<br><input style="margin-left: 145px" type="radio" name="hemisphere" value="eastern_hemisphere">Eastern Hemisphere
+
+                    <br>
+
+                    <input type="submit" value="Calculate" class="button">
+
+                    
+                </form>
+            </div>
+        <a style="color: white;" href="http://www.vatsalmistry.me">www.vatsalmistry.me</a>
+        <br style="line-height: 300%">
+        <p style="color: white; background-color: black;">Copyrights 2017 | All Rights Reserved | Developed by Vatsal Mistry | Contact for more such projects.</p>
+        </div>
+	</body>
+</html>

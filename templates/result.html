@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>  
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <!-- Meta Tag for responsive -->
+    <meta name=”viewport” content=”width=1024, minimal-ui”>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="height=device-height, initial-scale=1.0">  
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet"> 
+
+<title>Solar Incidence Angle</title>
+	<head>
+		<title>Solar Incidence Angle</title>
+	</head>
+	
+    <body style="margin: 0px; padding: 0px;">
+		<div class = "Main">
+            <div class = "Title">
+                Solar Incidence Angle Calculator
+            </div>
+
+            <div class = "Calc_Box" class="fontclass" style="font-size: 30px">
+                   <p>The Solar Time is {{ solar_time }}.</p><br>
+                   <p>The Incidence Angle is {{ incidence_angle }} degrees.</p>
+
+                   <input type="button" onclick="goBack()" value="Go Back" class="button">
+            </div>
+        <p style="color: white; font-weight: normal;";">Developed by Vatsal Mistry.</p>
+        <a style="color: white;" href="http://www.vatsalmistry.me">www.vatsalmistry.me</a>
+        <br>
+        <p style="color: white; background-color: black;">Copyrights 2017 | All Rights Reserved | Contact for more such projects.</p> 
+        </div>
+
+        <script>
+        function goBack() {
+            window.history.back();
+        }
+        </script> 
+
+	</body>
+</html>
